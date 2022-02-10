@@ -10,13 +10,11 @@ public final class TheAPI extends JavaPlugin {
     public void onEnable() {
         instance = this;
 
-        //Testing
-
     }
 
     @Override
     public void onDisable() {
-        // Plugin shutdown logic
+        
     }
 
     public static TheAPI getInstance() {
