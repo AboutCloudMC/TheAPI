@@ -14,7 +14,7 @@ public final class TheAPI extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        
+
     }
 
     public static TheAPI getInstance() {
