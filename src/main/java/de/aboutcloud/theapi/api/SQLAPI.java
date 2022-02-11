@@ -23,9 +23,11 @@ public class SQLAPI {
         this.username = username;
         this.password = password;
         this.port = port;
+
+        connect();
     }
 
-    public void connect() {
+    private void connect() {
         if(!isConnected()) {
             try {
                 con = DriverManager.getConnection("jdbc:mysql://" + host + ":" + port + "/" + database,username,password);
