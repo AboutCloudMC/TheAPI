@@ -1,6 +1,9 @@
 package de.aboutcloud.theapi;
 
+import de.aboutcloud.theapi.api.FileAPI;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.io.IOException;
 
 public final class TheAPI extends JavaPlugin {
 
@@ -9,7 +12,6 @@ public final class TheAPI extends JavaPlugin {
     @Override
     public void onEnable() {
         instance = this;
-
     }
 
     @Override

@@ -36,10 +36,10 @@ public class FileAPI {
     }
 
     public File getFile() {
-        return file;
+        return this.file;
     }
 
     public FileConfiguration getConfig() {
-        return config;
+        return this.config;
     }
 }

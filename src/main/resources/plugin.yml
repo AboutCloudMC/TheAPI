@@ -1,4 +1,4 @@
 name: TheAPI
 version: '${project.version}'
 main: de.aboutcloud.theapi.TheAPI
-api-version: 1.16
+api-version: 1.18
