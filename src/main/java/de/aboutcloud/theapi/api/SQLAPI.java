@@ -1,11 +1,6 @@
 package de.aboutcloud.theapi.api;
 
-import org.bukkit.Bukkit;
-
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class SQLAPI {
 
@@ -31,7 +26,7 @@ public class SQLAPI {
         if(!isConnected()) {
             try {
                 con = DriverManager.getConnection("jdbc:mysql://" + host + ":" + port + "/" + database,username,password);
-                Bukkit.getConsoleSender().sendMessage("§aMySQL Verbindung erfolgreich!");
+                //Bukkit.getConsoleSender().sendMessage("§aMySQL Verbindung erfolgreich!");
             } catch (SQLException throwables) {
                 throwables.printStackTrace();
             }
@@ -45,29 +40,12 @@ public class SQLAPI {
             } catch (SQLException throwables) {
                 throwables.printStackTrace();
             }
-            Bukkit.getConsoleSender().sendMessage("§cMySQL Verbindung abgebrochen!");
+            //Bukkit.getConsoleSender().sendMessage("§cMySQL Verbindung abgebrochen!");
         }
     }
 
     public boolean isConnected() {
         return con != null;
-    }
-
-    public void createTableCoins() {
-        /*
-
-        Systax: Spielername, UUID, Ende, Grund
-
-         */
-
-        if(isConnected()) {
-            try {
-                PreparedStatement ps = getCon().prepareStatement("CREATE TABLE IF NOT EXISTS Coins (UUID VARCHAR(100), Coins VARCHAR(100))");
-                ps.executeUpdate();
-            } catch (SQLException throwables) {
-                throwables.printStackTrace();
-            }
-        }
     }
 
     public void createTable(String name, String... values) {
